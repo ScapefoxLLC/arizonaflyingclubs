@@ -250,3 +250,6 @@ ul.qsheet__list > li::before { content: ""; position: absolute; left: 0; top: .3
   .print-only { display: inline !important; font-weight: 600; }
   h2, h3 { break-after: avoid; }
 }
+
+/* ?filter= notice on the club-type pages (src/filter.js) */
+.filternote { background: var(--sand-2); border-left: 4px solid var(--copper); padding: .6rem .9rem; border-radius: 6px; }
