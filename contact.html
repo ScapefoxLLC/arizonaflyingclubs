@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Arizona Flying Clubs</title>
+<meta name="description" content="Send an update about an Arizona flying club, add a club to the guide, or get in touch.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arizona Flying Clubs">
+<meta property="og:title" content="Contact | Arizona Flying Clubs">
+<meta property="og:description" content="Send an update about an Arizona flying club, add a club to the guide, or get in touch.">
+<meta property="og:url" content="https://arizonaflyingclubs.com/contact.html">
+<link rel="canonical" href="https://arizonaflyingclubs.com/contact.html">
+<link rel="icon" href="assets/favicon.svg?v=5c9156bdba" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png?v=5c9156bdba" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=5c9156bdba">
+<link rel="stylesheet" href="assets/style.css?v=5c9156bdba">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">&#9992;</span> Arizona Flying Clubs</a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav"><a href="index.html">Home</a>
+<a href="traditional.html">Traditional</a>
+<a href="non-traditional.html">Non-traditional</a>
+<a href="social.html">Social</a>
+<a href="choosing.html">Choosing a Club</a>
+<a href="wizard.html">Club Wizard</a>
+<a href="contact.html" aria-current="page">Contact</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<h1>Contact</h1>
+<p class="lede">Please send updates on ANY of the information here. I count on all of you to get me the latest information. Use this form to add a club, update a listing, share your experience of a club, or get in touch with me. Messages come straight to me by email and are not published.</p>
+
+<form id="contact" class="form" action="https://api.web3forms.com/submit" method="POST" data-key-missing="0">
+  <input type="hidden" name="access_key" value="453d9f1d-faff-4b5e-bff4-c1dc7831d5f7">
+  <input type="hidden" name="subject" value="Message from Arizona Flying Clubs">
+  <input type="hidden" name="from_name" value="Arizona Flying Clubs website">
+  <input type="hidden" name="redirect" value="">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+  <fieldset class="topics">
+    <legend>What is this about?</legend>
+    <label><input type="radio" name="topic" value="new-club" required> Add a new club</label>
+    <label><input type="radio" name="topic" value="revision"> Update a club's information</label>
+    <label><input type="radio" name="topic" value="comment"> Private note about a club</label>
+    <label><input type="radio" name="topic" value="author"> Contact the author</label>
+  </fieldset>
+
+  <div class="field" data-show="revision comment">
+    <label for="club">Which club?</label>
+    <select id="club" name="club"><option value="">Choose a club</option><option value="arizona-flyers">Arizona Flyers</option><option value="cloudbusters">Cloudbusters</option><option value="deer-valley-skyhawks">Deer Valley Skyhawks</option><option value="desert-flyers">Desert Flyers</option><option value="flying-javelina-aero-club">Flying Javelina Aero Club</option><option value="flying-ten-flying-club">Flying Ten Flying Club</option><option value="gossamer-wings">Gossamer Wings</option><option value="hometown-flying-club">Hometown Flying Club</option><option value="imc-club">IMC Club</option><option value="legacy-aviation-flying-club">Legacy Aviation Flying Club</option><option value="painted-rock-cirrus-club">Painted Rock Cirrus Club</option><option value="payson-aero-club">Payson Aero Club</option><option value="phoenix-area-flying-club">Phoenix Area Flying Club</option><option value="phoenix-flyers">Phoenix Flyers</option><option value="professional-pilot-flying-club">Professional Pilot Flying Club</option><option value="scottsdale-flying-club">Scottsdale Flying Club</option><option value="third-step-flying-club">Third Step Flying Club</option><option value="tucson-soaring-club">Tucson Soaring Club</option><option value="vars-flying-club">VARS Flying Club</option><option value="vmc-club">VMC Club</option><option value="west-valley-flying-club">West Valley Flying Club</option></select>
+  </div>
+
+  <div class="field" data-show="revision comment">
+    <label for="relationship">Your connection to the club</label>
+    <select id="relationship" name="relationship">
+      <option value="">Choose one</option>
+      <option>Officer or board member</option><option>Current member</option>
+      <option>Former member</option><option>Thinking of joining</option><option>Other</option>
+    </select>
+  </div>
+
+  <div data-show="new-club">
+    <div class="field"><label for="club_name">Club name</label><input id="club_name" name="club_name"></div>
+    <div class="row">
+      <div class="field"><label for="club_type">Kind of club</label>
+        <select id="club_type" name="club_type"><option value="">Choose one</option><option value="traditional">Traditional</option><option value="non-traditional">Non-traditional</option><option value="social">Social</option><option value="unsure">Not sure</option></select></div>
+      <div class="field"><label for="club_airport">Home airport</label><input id="club_airport" name="club_airport" placeholder="e.g. DVT"></div>
+    </div>
+    <div class="field"><label for="club_website">Club website or contact</label><input id="club_website" name="club_website" placeholder="Website, email or phone"></div>
+    <p class="hint">In the message, tell me about the aircraft (with hourly rates, wet or dry, Hobbs or tach), join fee and how much is refundable, monthly dues, experience required, whether non-owned insurance is required, membership cap and wait list, and whether Mexico trips are allowed.</p>
+  </div>
+
+  <div class="row">
+    <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
+    <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+  </div>
+  <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="8" required></textarea></div>
+
+  <p id="keywarn" class="notice" hidden>The contact form is not connected yet (no Web3Forms access key), so messages cannot be sent from this preview.</p>
+  <button class="btn" type="submit">Send</button>
+</form>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <p>Arizona Flying Clubs is an independent guide compiled by Theodore Dryden, last updated October 2026. Club details and prices change; always confirm with the club before joining.</p>
+    <p><a href="contact.html?topic=new-club">Add your club</a> &middot; <a href="contact.html?topic=revision">Send an update</a> &middot; <a href="contact.html?topic=author">Contact the author</a></p>
+  </div>
+</footer>
+<script src="assets/site.js?v=5c9156bdba"></script>
+<script src="assets/contact.js?v=5c9156bdba"></script>
+</body>
+</html>
