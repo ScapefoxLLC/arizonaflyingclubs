@@ -272,7 +272,7 @@
     }
 
     if (!social && a.size && a.size !== "either") {
-      var planes = (c.aircraft || []).filter(function (x) { return !x.sim; }).length;
+      var planes = (c.aircraft || []).reduce(function (n, x) { return x.sim ? n : n + (x.count || 1); }, 0);
       var small = planes <= 1;
       if ((a.size === "small") === small) {
         s += 3;
