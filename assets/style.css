@@ -202,7 +202,10 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--sky-2); out
 .card__links .card__more { margin: 0; }
 
 .print-only { display: none; }
-.pdflink { margin-top: -.4rem; }
+.pdflink { display: flex; align-items: center; gap: .9rem 1.2rem; flex-wrap: wrap; background: #fff; border: 2px solid var(--copper); border-radius: var(--radius); padding: 1rem 1.3rem; margin: 1.4rem 0; }
+.pdflink__icon { width: 2.4rem; height: 2.4rem; flex: none; color: var(--copper); }
+.pdflink p { flex: 1 1 16rem; margin: 0; }
+.pdflink .btn { margin: 0; }
 
 /* Questions checklist (questions.html, printed to club-questions.pdf) */
 .qsheet { max-width: 760px; }
@@ -220,7 +223,6 @@ ul.qsheet__list { list-style: none; padding-left: 0; }
 ul.qsheet__list > li { padding-left: 1.6rem; position: relative; }
 ul.qsheet__list > li::before { content: ""; position: absolute; left: 0; top: .3em; width: .85em; height: .85em; border: 1.5px solid var(--ink); border-radius: 2px; }
 .qsheet__note { margin: .15rem 0 0; font-size: .92em; color: #3b4148; }
-.pdflink a { font-weight: 600; }
 
 /* Printing (and the Choosing a Club PDF): no nav, white page, the club matrix fits the page width. */
 @media print {
