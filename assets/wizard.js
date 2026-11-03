@@ -341,7 +341,7 @@
       costHtml + "<ul>" + lines + "</ul></div>";
   }
 
-  // TEMPORARY (Ted, 2026-11-01): show the answers above the results while tuning.
+  // Answers panel above the results, for tuning the wizard. Off unless the URL has ?debug=1.
   function debugAnswers(a) {
     var rows = active().map(function (s) {
       var v = a[s.id], t;
@@ -385,7 +385,9 @@
     var rest = ok.filter(function (r) { return top.indexOf(r) === -1 && r.score > 0; }).slice(0, 4);
     var hidden = ok.length - top.length - rest.length;
 
-    var html = debugAnswers(a) + '<h2 class="wiz__q">Your suggested clubs</h2>';
+    // The answers panel is for checking the wizard: add ?debug=1 to the URL to see it.
+    var debug = /[?&]debug=1\b/.test(location.search);
+    var html = (debug ? debugAnswers(a) : "") + '<h2 class="wiz__q">Your suggested clubs</h2>';
     if (!top.length && ok.length) {
       html += "<p>Nothing is a strong match for those answers. Here is everything that fits your experience; try widening the area or your goals.</p>";
       rest = ok;
