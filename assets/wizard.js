@@ -24,7 +24,7 @@
         { v: 175, t: "100 to 250 hours" },
         { v: 500, t: "250 hours or more" },
         { v: COMMERCIAL, t: "More than 1,000 hours, with a commercial certificate" } ] },
-    { id: "goals", q: "What do you want to do with the club?", hint: "Choose all that apply.", kind: "many",
+    { id: "goals", q: "What club attributes are most important to you?", hint: "Choose all that apply.", kind: "many",
       opts: function (a) {
         if (a.want === "social") return D.social_goals.map(function (g) { return { v: g.key, t: g.wizard }; });
         // Cost and area have their own questions, club size too (it replaces
