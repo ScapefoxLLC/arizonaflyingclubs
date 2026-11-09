@@ -33,7 +33,7 @@
           { v: "training", t: "Learn to fly" },
           { v: "slow", t: "Fly lower-performance aircraft" },
           { v: "fast", t: "Fly fast, high-performance aircraft" },
-          { v: "fastest", t: "Fly the fastest airplanes I can find, price is not an object" },
+          { v: "fastest", t: "Fly the fastest airplanes I can find, price is no object" },
           { v: "useful-load", t: "Fly an airplane with a high useful load" },
           { v: "rotor-twin", t: "Fly a helicopter or a twin" },
           { v: "long-xc", t: "Fly a few long cross-country trips a year" },
