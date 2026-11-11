@@ -160,7 +160,7 @@
     if (a.exp === STUDENT && c.student_monthly_dues != null) dues = c.student_monthly_dues;
     if (dues == null) dues = c.annual_fee ? c.annual_fee / 12 : 0;
     var each = fleet.map(function (x) {
-      var fuel = x.rate_basis === "dry" && x.gph_est ? x.gph_est * D.fuel_price : 0;
+      var fuel = x.fuel_hr || 0;
       return { hr: x.rate + fuel, ac: x, fuel: fuel };
     }).sort(function (p, q) { return p.hr - q.hr; });
     var lo = each[0], hi = each[each.length - 1];
@@ -183,8 +183,8 @@
     var best = null;
     (c.aircraft || []).forEach(function (x) {
       if (x.rate == null || x.sim) return;
-      var fuel = x.rate_basis === "dry" && x.gph_est;
-      var p = { hr: x.rate + (fuel ? x.gph_est * D.fuel_price : 0), basis: fuel ? "wet, with estimated fuel" : x.rate_basis };
+      var fuel = x.fuel_hr;
+      var p = { hr: x.rate + (fuel || 0), basis: fuel ? "wet, with estimated fuel" : x.rate_basis };
       if (!best || p.hr < best.hr) best = p;
     });
     return best;
@@ -404,7 +404,7 @@
       }).join("");
     }
     if (a.want !== "social") {
-      html += '<p class="aside">Cost estimates run from the cheapest to the most expensive airplane at each club, including monthly dues, and for dry rates a typical fuel burn at $' +
+      html += '<p class="aside">Cost estimates run from the cheapest to the most expensive airplane at each club, including monthly dues, and for dry rates the fuel for a typical 2-hour flight at $' +
         D.fuel_price.toFixed(2) + "/gal. They leave out join fees, equity and non-owned insurance. Prices change; confirm with the club.</p>";
     }
     html += '<div class="wiz__nav"><button class="btn btn--ghost" id="wr2">Start over</button><a class="btn" href="choosing.html">Questions to ask a club</a></div>';
